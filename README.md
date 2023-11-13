@@ -2,9 +2,7 @@
 
 Reverse obfuscated tailwind classes
 
-<p align="center">
-  <img src="/assets/retailwind.gif" />
-</p>
+![app](/assets/retailwind.gif)
 
 ## Install
 
