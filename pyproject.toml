@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "retailwind"
+version = "0.1.0"
+description = "Reverse obfuscated tailwind classes"
+authors = ["Alban Siffer <alban.siffer@irisa.fr>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "retailwind" }]
+include = ["dev/tailwind.css"]
+homepage = "https://github.com/asiffer/retailwind"
+repository = "https://github.com/asiffer/retailwind"
+keywords = ["tailwind", "reverse"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+rich = "^13.6.0"
+textual = { extras = ["syntax"], version = "^0.41.0" }
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.4"
+black = "^23.10.1"
+mypy = "^1.6.1"
+types-requests = "^2.31.0.10"
+pytest = "^7.4.3"
+ipython = "^8.17.2"
+textual-dev = "^1.2.1"
+types-beautifulsoup4 = "^4.12.0.7"
+pytest-cov = "^4.1.0"
+pytest-asyncio = "^0.21.1"
+
+[tool.poetry.scripts]
+retailwind = "retailwind.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.black]
+line-length = 79
+target-version = ['py311']
